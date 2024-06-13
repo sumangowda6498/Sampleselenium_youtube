@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class SelectDropdown35 {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Hello world!");
@@ -23,6 +25,21 @@ public class SelectDropdown35 {
         Thread.sleep(2000);
         select.selectByIndex(1);
         Thread.sleep(3000);
-        driver.close();
+       // driver.close();
+        //#37-deselect
+        driver.get("https://demo.seleniumeasy.com/basic-select-dropdown-demo.html");
+        WebElement dropdown= driver.findElement(By.id("multi-select"));
+        Select select1=new Select(dropdown);
+        Thread.sleep(2000);
+
+        select1.selectByValue("California");
+        select1.selectByIndex(5);
+       List<WebElement> list= select1.getAllSelectedOptions();
+        System.out.println(list.size());
+        Thread.sleep(2000);
+        select1.deselectAll();
+
+
+        //-select
     }
 }
