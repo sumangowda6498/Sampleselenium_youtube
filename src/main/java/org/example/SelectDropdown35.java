@@ -20,6 +20,9 @@ public class SelectDropdown35 {
         Select select=new Select(ddown);
         select.selectByValue("level6");
         Thread.sleep(2000);
+        WebElement firtselecteditem=select.getFirstSelectedOption();
+        System.out.println(firtselecteditem.getText());
+
 
         select.selectByVisibleText("251 - 500 employees");
         Thread.sleep(2000);
@@ -33,12 +36,22 @@ public class SelectDropdown35 {
         Thread.sleep(2000);
 
         select1.selectByValue("California");
+        Thread.sleep(2000);
         select1.selectByIndex(5);
-       List<WebElement> list= select1.getAllSelectedOptions();
-        System.out.println(list.size());
+        Thread.sleep(2000);
+        List<WebElement> list1= select1.getAllSelectedOptions();
+        System.out.println(list1.size());
         Thread.sleep(2000);
         select1.deselectAll();
+        Thread.sleep(2000);
 
+        select1.selectByValue("California");
+        Thread.sleep(2000);
+        select1.selectByIndex(5);
+        Thread.sleep(2000);
+        select1.deselectByIndex(5);
+        List<WebElement> list2= select1.getAllSelectedOptions();
+        System.out.println(list2.size());
 
         //-select
     }
