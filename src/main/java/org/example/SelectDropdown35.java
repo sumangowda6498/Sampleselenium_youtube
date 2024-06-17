@@ -52,6 +52,7 @@ public class SelectDropdown35 {
         select1.deselectByIndex(5);
         List<WebElement> list2= select1.getAllSelectedOptions();
         System.out.println(list2.size());
+        //comit 38
 
         //-select
     }
