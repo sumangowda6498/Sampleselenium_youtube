@@ -6,7 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class SelectDropdown35 {
+public class
+SelectDropdown35 {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Hello world!");
         System.setProperty("webdriver.edge.driver","C:\\Users\\sumana\\IdeaProjects\\Sampleselenium\\resources\\msedgedriver.exe");
