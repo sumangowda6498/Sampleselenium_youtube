@@ -13,10 +13,18 @@ public class DemoIframe {
         driver.manage().window().maximize(); //manage: get the option interface
 
         driver.get("https://www.w3schools.com/js/tryit.asp?filename=tryjs_alert");
-        Thread.sleep(2000);
-        WebElement frame1=driver.findElement(By.id("iframeResult"));
 
+        Thread.sleep(2000);
+
+        WebElement frame1=driver.findElement(By.id("iframeResult"));
+        driver.switchTo().frame(frame1);
         driver.findElement(By.xpath("/html/body/button")).click();
+
+        Thread.sleep(2000);
+        String AlertText= driver.switchTo().alert().getText();
+        System.out.println(AlertText);
+        driver.switchTo().alert().accept();
+
         driver.switchTo().parentFrame();
         System.out.println(driver.getTitle());
 
