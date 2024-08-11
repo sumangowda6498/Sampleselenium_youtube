@@ -22,7 +22,7 @@ public class HandleAuthenticationPopup_59 {
         WebDriver driver = new EdgeDriver();
         driver.manage().window().maximize(); //manage: get the option interface
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        //driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+        //  driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
 
 //        WebElement Auth= driver.findElement(By.xpath("//*[@id=\"content\"]/ul/li[3]/a"));
 //        Auth.click();
