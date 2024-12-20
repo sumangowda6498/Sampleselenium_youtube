@@ -14,9 +14,11 @@ public class Radiobutton41 {
         driver.manage().window().maximize(); //manage: get the option interface
 
         driver.get("https://www.singaporeair.com/en_UK/in/home#/book/bookflight");
+        driver.getTitle();
         Thread.sleep(2000);
         WebElement rdio1=driver.findElement(By.id("bookFlights"));
         WebElement rdio2=driver.findElement(By.id("redeemFlights"));
+        rdio2.getText();
          rdio2.click();
 
         System.out.println(rdio1.isSelected());
