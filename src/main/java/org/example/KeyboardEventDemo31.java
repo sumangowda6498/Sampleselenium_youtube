@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class KeyboardEventDemo {
+public class KeyboardEventDemo31 {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Hello world!");
         System.setProperty("webdriver.edge.driver","resources/msedgedriver.exe");
