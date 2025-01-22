@@ -19,6 +19,7 @@ public class MouseOver45 {
 
 
         driver.get("https://www.ebay.com/?msockid=1054b9ace5d066643b20b62be47d6748");
+        System.out.println(driver.getTitle());
 
         WebElement webElement=driver.findElement(By.xpath("//*[@id=\"vl-flyout-nav\"]/ul/li[2]/a"));
 
