@@ -31,8 +31,9 @@ public class CheckBoxdemo40 {
         driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[1]")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[2]")).click();
+        System.out.println(driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[1]")).isSelected());
 
-        System.out.println(driver.findElements(By.xpath("//input[@type='checkbox']")).size());
+        System.out.println("The number of check boxes:"+driver.findElements(By.xpath("//input[@type='checkbox']")).size());
 
 
     }

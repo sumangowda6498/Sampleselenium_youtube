@@ -7,7 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class Resize47 {
-    public static void main(String[] args) throws InterruptedException {
+        public static void main(String[] args) throws InterruptedException {
         System.out.println("Hello world!");
         System.setProperty("webdriver.edge.driver","resources/msedgedriver.exe");
         WebDriver driver= new EdgeDriver();

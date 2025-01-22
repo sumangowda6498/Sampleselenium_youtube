@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.Date;
 
 public class Screenshot57 {
+    WebDriver driver = new EdgeDriver();
     public static void main(String[] args) throws InterruptedException, IOException {
         System.out.println("Hello world!");
         System.setProperty("webdriver.edge.driver", "resources/msedgedriver.exe");
@@ -24,8 +25,20 @@ public class Screenshot57 {
 
         File screenshotFile= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(screenshotFile,new File(".//screenshot/"+screeshotfile+".png"));
-
+        takescreen();
         WebElement Accept= driver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]"));
         Accept.click();
+        takescreen();
+    }
+    public static void takescreen() throws IOException {
+        WebDriver driver = new EdgeDriver();
+        Date currentdate =new Date();
+        System.out.println(currentdate);
+        String screeshotfile=currentdate.toString().replace(" ","-").replace(":","-");
+        System.out.println(screeshotfile);
+
+        File screenshotFile= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshotFile,new File(".//screenshot/"+screeshotfile+".png"));
+
     }
 }

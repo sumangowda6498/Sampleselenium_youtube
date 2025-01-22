@@ -12,7 +12,8 @@ import java.util.Set;
 public class WorkingwithWebElement_two {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        System.setProperty("webdriver.edge.driver","resources/msedgedriver.exe");
+        System.setProperty("webdriver.edge.driver","" +
+                "");
         WebDriver driver= new EdgeDriver();
         driver.manage().window().maximize(); //manage: get the option interface
 

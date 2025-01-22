@@ -13,13 +13,24 @@ public class AutoSuggestinDropdown39 {
         driver.manage().window().maximize(); //manage: get the option interface
 
         driver.get("https://www.makemytrip.com/");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id=\"SW\"]/div[1]/div[2]/div[2]/div/section/span")).click();
         driver.findElement(By.xpath("//Span[text()='From']")).click();
-        //Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@id='fromCity']")).sendKeys("Sydney");
-        //Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@id='fromCity']")).sendKeys(Keys.ARROW_DOWN);
-        //hread.sleep(2000);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//Span[text()='From']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id=\"top-banner\"]/div[2]/div/div/div/div/div[2]/div[1]/div[1]/div[1]/div/div/div/input")).sendKeys("Sydney");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id=\"top-banner\"]/div[2]/div/div/div/div/div[2]/div[1]/div[1]/div[1]/div/div/div/input")).sendKeys(Keys.ARROW_DOWN);
+
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("//*[@id=\"top-banner\"]/div[2]/div/div/div/div/div[2]/div[1]/div[1]/div[1]/div/div/div/input")).sendKeys(Keys.ENTER);
+
+
+
+        driver.findElement(By.xpath("//*[@id=\"top-banner\"]/div[2]/div/div/div/div/div[2]/div[1]/div[1]/div[1]/div/div/div/input")).sendKeys(Keys.ARROW_DOWN);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//input[@id='fromCity']")).sendKeys(Keys.ENTER);
-
-
-    }}
+    }
+}
