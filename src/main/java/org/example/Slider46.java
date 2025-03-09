@@ -14,14 +14,27 @@ public class Slider46 {
         driver.manage().window().maximize(); //manage: get the option interface
 
         driver.get("https://jqueryui.com/droppable/");
-WebElement frame=driver.findElement(By.xpath("//*[@id=\"content\"]/iframe"));
+        WebElement dev=driver.findElement(By.linkText("Development"));
+
+        WebElement frame=driver.findElement(By.xpath("/html/body/div/div[2]/div/div[1]/iframe"));
+        driver.switchTo().frame(frame);
+//*[@id="content"]/iframe
+Thread.sleep(2000);
         WebElement drag=driver.findElement(By.id("draggable"));
         WebElement drop= driver.findElement(By.id("droppable"));
 
-        driver.switchTo().frame(frame);
+
+
+
+
 
         Actions action= new Actions(driver);
         action.dragAndDrop(drag,drop);
+        Thread.sleep(2000);
+driver.switchTo().parentFrame();
+        action.moveToElement(dev).perform();
+
+
 
     }
 }

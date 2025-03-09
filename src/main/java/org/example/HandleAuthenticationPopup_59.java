@@ -1,5 +1,6 @@
 package org.example;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,6 +29,8 @@ public class HandleAuthenticationPopup_59 {
 //        Auth.click();
         Thread.sleep(2000);
         driver.get("https://"+username+":"+password+"admin@the-internet.herokuapp.com/basic_auth");
+        Alert alertonpage=driver.switchTo().alert();
+
 
     }
 }
